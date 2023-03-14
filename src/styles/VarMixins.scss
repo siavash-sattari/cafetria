@@ -1,0 +1,60 @@
+$c-bg: #1b1c1e;
+$c-bg-2: #161718;
+$c-bg-3: #1f2022;
+
+$c-s-1: #e6cc9a;
+$c-s-2: #d4b476;
+$c-s-3: #9d814c;
+
+$c-txt: #dfddd8;
+$c-txt-2: rgba(223, 221, 216, 0.5);
+
+$fontSizeMedium: 1.4rem;
+
+$radius: 3px;
+
+@mixin numberH2($number) {
+  content: '0' + $number + '.';
+  color: $c-s-1;
+  font-family: 'Koulen', cursive;
+  font-weight: 400;
+  display: block;
+  font-size: 1rem;
+  line-height: 100%;
+  margin-bottom: 0.8rem;
+}
+
+@mixin fontTitles($size) {
+  font-family: 'Koulen', cursive;
+  font-weight: 400;
+  line-height: 100%;
+  @if $size == m {
+    font-size: $fontSizeMedium;
+  } @else {
+    font-size: $size;
+  }
+}
+
+@mixin balls($color) {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: $color;
+  display: block;
+  position: absolute;
+  top: -3rem;
+  left: 0;
+}
+
+@mixin arrow {
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  svg {
+    width: 0.6rem;
+  }
+}
