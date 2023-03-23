@@ -1,0 +1,141 @@
+@import '../VarMixins.scss';
+
+.best-seller {
+  padding: 4rem 0;
+  .h2::before {
+    @include numberH2(2);
+  }
+  .header-best-seller {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .slider {
+    margin-top: 4rem;
+    position: relative;
+    padding: 1px;
+  }
+  .slide-item {
+    text-align: center;
+    height: auto;
+    border-radius: $radius;
+    transition: 0.1s;
+    &:hover,
+    &:nth-of-type(1) {
+      background: $c-bg-3;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 2rem;
+      cursor: inherit;
+    }
+    h3,
+    .price {
+      @include fontTitles(m);
+    }
+    .price {
+      padding-top: 1rem;
+      margin-top: auto;
+      display: block;
+    }
+    h3 {
+      margin-bottom: 0.5rem;
+    }
+    img {
+      width: 7rem;
+    }
+    .cal {
+      color: $c-txt-2;
+      font-size: 0.8rem;
+      display: block;
+      margin: 0.5rem 0 2rem 0;
+    }
+  }
+  .slider-container {
+    position: relative;
+  }
+  .arrow {
+    @include arrow;
+    position: absolute;
+    top: calc(50% - 1rem);
+    color: $c-txt-2;
+    &:hover {
+      color: $c-txt;
+    }
+  }
+  .arrow-left {
+    transform: rotate(-90deg);
+    left: -3rem;
+  }
+  .arrow-right {
+    transform: rotate(90deg);
+    right: -3rem;
+  }
+  background: url('../../assets/coffee-grain.png'), url('../../assets/coffee-grain-2.png');
+  background-repeat: no-repeat;
+  background-position: 30% -5%, 90% 110%;
+}
+
+@media (max-width: 1300px) {
+  .best-seller {
+    .slider {
+      margin-top: 6rem;
+    }
+    .arrow {
+      top: -3rem;
+    }
+    .arrow-left {
+      left: 0;
+    }
+    .arrow-right {
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 910px) {
+  .best-seller {
+    overflow: hidden;
+    .slider {
+      overflow: visible;
+      margin-top: 5rem;
+    }
+    .slide-item {
+      background: $c-bg-3;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .best-seller {
+    .slide-item {
+      a {
+        padding: 1rem 0.5rem;
+      }
+      img {
+        width: 4.5rem;
+      }
+      .cal {
+        margin: 0.5rem 0 1rem 0;
+      }
+    }
+    .title {
+      max-width: 13rem;
+    }
+    .btn {
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .best-seller {
+    padding: 2rem 0;
+  }
+}
