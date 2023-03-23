@@ -1,11 +1,96 @@
-@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:wght@500&display=swap');
 
-@import "./Normalize.scss";
-@import "./VarMixins.scss";
+@import './Normalize.scss';
+@import './VarMixins.scss';
 
 body {
   background: $c-bg;
   color: $c-txt;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 17px;
+}
+
+h2 {
+  @include fontTitles(4rem);
+}
+
+.btn {
+  background: $c-s-1;
+  color: $c-s-3;
+  border-radius: $radius;
+  transition: 0.1s;
+  @include fontTitles(1.2rem);
+  padding: 1.1rem 1.9rem;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  color: $c-s-2;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.section-pd {
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.paragraph {
+  color: $c-txt-2;
+  line-height: 160%;
+}
+
+::-webkit-scrollbar {
+  background: $c-bg;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $c-s-1;
+}
+
+@media (max-width: 1005px) {
+  body {
+    font-size: 15px;
+  }
+
+  h2 {
+    @include fontTitles(3rem);
+  }
+}
+
+@media (max-width: 910px) {
+  .container {
+    max-width: 550px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-pd {
+    padding: 2rem 0;
+  }
+  .container {
+    padding: 0 1.5rem;
+  }
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    @include fontTitles(2.6rem);
+  }
+  .btn {
+    @include fontTitles(1rem);
+    padding: 0.9rem 1.6rem;
+  }
+  .paragraph {
+    line-height: 145%;
+  }
 }

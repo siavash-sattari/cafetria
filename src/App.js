@@ -1,7 +1,14 @@
-import "./styles/App.scss";
+import Header from './components/Header';
+import Home from './components/Home';
+import './styles/App.scss';
 
 function App() {
-  return <h1>Cafetria Project</h1>;
+  return (
+    <>
+      <Header />
+      <Home />
+    </>
+  );
 }
 
 export default App;

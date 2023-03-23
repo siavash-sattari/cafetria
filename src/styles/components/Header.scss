@@ -1,0 +1,106 @@
+@import '../VarMixins.scss';
+
+.header {
+  position: absolute;
+  width: calc(100% - 14rem);
+  right: 0;
+  top: 2rem;
+  padding: 0 1rem;
+  nav,
+  ul {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+  }
+  ul {
+    color: $c-txt-2;
+    margin: 0 auto;
+    li + li {
+      margin-left: 3rem;
+    }
+    a {
+      transition: 0.1s;
+    }
+    .active,
+    a:hover {
+      color: $c-txt;
+    }
+  }
+  .logo {
+    @include fontTitles(m);
+  }
+  .menu-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 1350px) {
+  .header {
+    width: calc(100% - 11rem);
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1005px) {
+  .header {
+    padding: 0;
+  }
+}
+
+@media (max-width: 910px) {
+  .header {
+    .menu-btn {
+      margin-left: 1rem;
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: $radius;
+      display: grid;
+      place-items: center;
+      order: 2;
+      &.active {
+        box-shadow: 0 0 0 2px $c-s-1;
+      }
+      svg {
+        width: 1.2rem;
+      }
+    }
+    nav {
+      position: relative;
+    }
+    ul {
+      position: absolute;
+      background: $c-bg-3;
+      flex-direction: column;
+      height: auto;
+      padding: 1rem;
+      border-radius: $radius;
+      width: calc(100% - 2rem);
+      top: 5rem;
+      display: none;
+      &.active {
+        display: block;
+      }
+      li + li {
+        margin-top: 1rem;
+        margin-left: 0;
+      }
+    }
+    .logo {
+      margin-right: auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    top: 1rem;
+    ul {
+      width: calc(100% - 3rem);
+    }
+  }
+}
