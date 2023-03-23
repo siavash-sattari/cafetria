@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import '../styles/components/Home.scss';
+import HomeSlide from './HomeSlide';
+import SocialMedia from './SocialMedia';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -28,9 +30,10 @@ const Home = () => {
         <div className='container'>
           <div className='content flex' data-aos='fade-up'>
             <h1>
-              CHANGE YOUR <br></br>ENERGY,<span> CHNAGE</span>
+              CHANGE YOUR <br></br>ENERGY,<span> CHANGE</span> 
               <br></br>YOUR WORLD
             </h1>
+            <HomeSlide />
           </div>
           <div className='flex flex-2' data-aos-delay='100' data-aos='fade-up' data-aos-offset='0'>
             <ul className='list-values'>
@@ -47,6 +50,7 @@ const Home = () => {
                 <p>Quis hendrerit dolor magna</p>
               </li>
             </ul>
+            <SocialMedia />
           </div>
         </div>
       </div>
