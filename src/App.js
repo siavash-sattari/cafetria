@@ -1,5 +1,6 @@
 import About from './components/About';
 import BestSeller from './components/BestSeller';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home';
 import News from './components/News';
@@ -15,6 +16,7 @@ function App() {
       <BestSeller />
       <News />
       <Subscribe />
+      <Footer />
     </>
   );
 }
