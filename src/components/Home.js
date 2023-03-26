@@ -30,7 +30,7 @@ const Home = () => {
         <div className='container'>
           <div className='content flex' data-aos='fade-up'>
             <h1>
-              CHANGE YOUR <br></br>ENERGY,<span> CHANGE</span> 
+              CHANGE YOUR <br></br>ENERGY,<span> CHANGE</span>
               <br></br>YOUR WORLD
             </h1>
             <HomeSlide />
@@ -38,16 +38,13 @@ const Home = () => {
           <div className='flex flex-2' data-aos-delay='100' data-aos='fade-up' data-aos-offset='0'>
             <ul className='list-values'>
               <li>
-                <span>imperdiet</span>
-                <p>Nec feugiat in fermentum</p>
+                <span>Improve mental focous</span>
               </li>
               <li>
-                <span>faucibus</span>
-                <p>Felis eget velit aliquet sagittis</p>
+                <span>Extra ENERGY</span>
               </li>
               <li>
-                <span>Consequat</span>
-                <p>Quis hendrerit dolor magna</p>
+                <span>HELPS TO RELAX</span>
               </li>
             </ul>
             <SocialMedia />
