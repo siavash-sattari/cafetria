@@ -1,6 +1,6 @@
 # Cafetria
 
-Design of a fictional coffee shop landing page made with React JS and Sass.
+<img width="1440" alt="Screen Shot 1402-01-29 at 02 58 28" src="https://user-images.githubusercontent.com/88406720/232632143-dc1cd9e8-5fab-4281-849b-83191ae4061f.png">
 
 ## Description
 
